@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="edu.pccu.Student" table="students">
+				
+		<id name="student_id" type="java.lang.Integer" unsaved-value="null" >
+    		<column name="student_id" not-null="true"/>
+    		<generator class="identity" />
+ 		</id>
+
+		<property name="student_name" type="java.lang.String" update="true"
+			insert="true" column="student_name" length="50" not-null="false" />
+
+		<property name="student_tel" type="java.lang.String" update="true"
+			insert="true" column="student_tel" not-null="false" />
+
+	</class>
+
+</hibernate-mapping>
