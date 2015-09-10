@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="chp04.Apple" table="apple">
+
+		<id name="id" column="id" type="java.lang.String" length="32">
+			<generator class="uuid.hex">
+			</generator>
+		</id>
+
+
+		<property name="color" type="java.lang.String" update="true"
+			insert="true" column="color" length="50" not-null="false" />
+
+		<property name="size" type="java.lang.Float" update="true"
+			insert="true" column="size" not-null="false" />
+
+
+
+		<property name="weight" type="java.lang.Float" update="true"
+			insert="true" column="weight" not-null="false" />
+
+
+	</class>
+
+</hibernate-mapping>
